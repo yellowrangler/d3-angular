@@ -14,11 +14,6 @@ svgApp.config(function ($routeProvider) {
                 controller: 'simplepieController',
                 templateUrl: 'app/partials/simplepiechart.html'
             })  
-        .when('/threedpie',
-            {
-                controller: 'threedpieController',
-                templateUrl: 'app/partials/threedpiechart.html'
-            })  
         .when('/donut',
             {
                 controller: 'donutChartController',
