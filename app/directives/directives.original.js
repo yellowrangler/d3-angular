@@ -93,15 +93,14 @@ svgApp.directive('threeTierDonutChart', function () {
 
     function draw3DChart(scope, element) {
         var data = scope.data;
-        var dataname = scope.dataname;
         var el = element[0];
         var width = el.clientWidth;
         var height = el.clientHeight;
 
         var svg = d3.select(el).append("svg").attr("width",700).attr("height",290);
-        svg.append("g").attr("id",dataname);
+        svg.append("g").attr("id","chartDonut");
 
-        draw(dataname, randomData(data), 330, 150, 330, 110, 30, 0.4);
+        draw("chartDonut", randomData(data), 330, 150, 330, 110, 30, 0.4);
     }
 
     function draw (id, data, x /*center x*/, y/*center y*/, 
@@ -176,9 +175,6 @@ svgApp.directive('threeTierDonutChart', function () {
     }
 
     function getPercent(d){
-        return (d.endAngle-d.startAngle > 0.2 ? 
-             d.data.label : '');
-
         // return (d.endAngle-d.startAngle > 0.2 ? 
         //      Math.round(1000*(d.endAngle-d.startAngle)/(Math.PI*2))/10+'%' : '');
     }   
@@ -259,8 +255,7 @@ svgApp.directive('threeTierDonutChart', function () {
         restrict: 'E',
         link: draw3DChart,
         scope: {
-            data: '=',
-            dataname: '='
+            data: '='
         }
     }
 });

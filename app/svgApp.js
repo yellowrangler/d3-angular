@@ -6,7 +6,7 @@ svgApp.config(function ($routeProvider) {
     $routeProvider
         .when('/home',
             {
-                controller: 'svgController',
+                controller: 'd3Controller',
                 templateUrl: 'app/partials/home.html'
             })  
         .when('/simplepie',
@@ -19,9 +19,14 @@ svgApp.config(function ($routeProvider) {
                 controller: 'donutChartController',
                 templateUrl: 'app/partials/donut.html'
             })  
+        .when('/threetierdonut',
+            {
+                controller: 'threetierdonutChartController',
+                templateUrl: 'app/partials/threetierdonutchart.html'
+            })  
         .when('/other',
             {
-                controller: 'svgController',
+                controller: 'd3Controller',
                 templateUrl: 'app/partials/home.html'
             })     
         .otherwise({redirectTo: '/home' });
