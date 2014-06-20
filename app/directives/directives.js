@@ -251,6 +251,7 @@ svgApp.directive('threeTierDonutChart', function () {
                 default:    
                     var x = 4;
             }
+            // return {label:"", value:x, color:d.color};});
             return {label:d.label, value:x, color:d.color};});
     }
 

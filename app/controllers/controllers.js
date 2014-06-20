@@ -43,7 +43,8 @@ controllers.donutChartController = function ($scope, $window) {
 controllers.threetierdonutChartController = function ($scope, $window) {
     var hacolor = "#445E83";
         var haprovider = "#660066";
-        var hachinese = "#f28226";
+        var hachinese = "#006633";
+        // var hachinese = "#f28226";
         var red = "#800000";
         var green ="#32CD32";
 
@@ -76,6 +77,20 @@ controllers.threetierdonutChartController = function ($scope, $window) {
         {id:10, label:"divider", color:"#000000"}
     ];
 
+    myData[3] =
+    [
+        {id:1, label:"Provider", color:haprovider},
+        {id:2, label:"divider", color:"#000000"},
+        {id:3, label:"Provider", color:hacolor},
+        {id:4, label:"divider", color:"#000000"},
+        {id:5, label:"Health Allianze", color:hachinese},
+        {id:6, label:"divider", color:"#000000"},   
+        {id:7, label:"Chinese", color:hacolor},
+        {id:8, label:"divider", color:"#000000"},
+        {id:9, label:"Health Allianze", color:haprovider},
+        {id:10, label:"divider", color:"#000000"}
+    ];
+
     
     init();
     function init() {       
@@ -84,6 +99,9 @@ controllers.threetierdonutChartController = function ($scope, $window) {
 
         $scope.chart2 = "donut2"; 
         $scope.donut2 = myData[1];
+
+        $scope.chart3 = "donut3"; 
+        $scope.donut3 = myData[3];
     };
 
     
